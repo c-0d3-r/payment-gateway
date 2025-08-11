@@ -1,7 +1,7 @@
 import { Column, Entity } from "typeorm";
-import { BaseSqlModel } from "../base/base.sql-model";
-import { PayoutStatus } from "@/domain/enums/payout-status.enum";
-import { PaymentSystem } from "@/domain/enums/payment-system.enum";
+import { BaseSqlModel } from "@/base/base.sql-model";
+import { PayoutStatus } from "@/modules/payments/domain/enums/payout-status.enum";
+import { PaymentSystem } from "@/modules/payments/domain/enums/payment-system.enum";
 
 @Entity('payouts')
 export class PayoutSqlModel extends BaseSqlModel {
@@ -11,7 +11,7 @@ export class PayoutSqlModel extends BaseSqlModel {
     @Column({
         type: 'enum',
         enum: PayoutStatus,
-        default: PayoutStatus.PENDING
+        default: PayoutStatus.Pending
     })
     public status: PayoutStatus;
 

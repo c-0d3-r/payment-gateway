@@ -1,5 +1,5 @@
-import { PaymentSystem } from "@/domain/enums/payment-system.enum";
-import { PayoutStatus } from "@/domain/enums/payout-status.enum";
+import { PaymentSystem } from "@/modules/payments/domain/enums/payment-system.enum";
+import { PayoutStatus } from "@/modules/payments/domain/enums/payout-status.enum";
 
 export class Payout {
     public constructor(public id: number) { }

@@ -1,5 +1,5 @@
 export enum PaymentStatus {
-  Created,
+  Pending,
   Completed,
   Cancelled,
   Failed,

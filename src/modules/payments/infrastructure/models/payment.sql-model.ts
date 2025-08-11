@@ -1,7 +1,7 @@
 import { Column, Entity, OneToOne, JoinColumn } from "typeorm";
-import { BaseSqlModel } from "@/infastructure/base/base.sql-model";
-import { PaymentStatus } from "@/domain/enums/payment-status.enum";
-import { PaymentSystem } from "@/domain/enums/payment-system.enum";
+import { BaseSqlModel } from "@/base/base.sql-model";
+import { PaymentStatus } from "@/modules/payments/domain/enums/payment-status.enum";
+import { PaymentSystem } from "@/modules/payments/domain/enums/payment-system.enum";
 import { PayoutSqlModel } from "./payout.sql-model";
 
 @Entity('payments')
@@ -30,7 +30,7 @@ export class PaymentSqlModel extends BaseSqlModel {
     @Column({
         type: 'enum',
         enum: PaymentStatus,
-        default: PaymentStatus.PENDING
+        default: PaymentStatus.Pending
     })
     public status: PaymentStatus;
 
